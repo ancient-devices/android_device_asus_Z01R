@@ -20,4 +20,4 @@ PRODUCT_MAKEFILES := \
 COMMON_LUNCH_CHOICES := \
     ancient_Z01R-user \
     ancient_Z01R-userdebug \
-    ancient_Z01R-eng 
+    ancient_Z01R-eng
