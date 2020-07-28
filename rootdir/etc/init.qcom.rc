@@ -31,6 +31,8 @@ on charger
 service cvphalservice /system/bin/true
     disabled
 
+on post-fs-data
+    # Clear existing log and start the service
     # debug boot process
     rm /cache/boot_lc_full.txt
     rm /cache/boot_lc_crash.txt
@@ -60,19 +62,10 @@ service boot_lc_kernel /system/bin/logcat -b kernel -D -f /cache/boot_lc_kernel.
     disabled
     oneshot
 
-on post-fs-data
-    # Clear existing log and start the service
-    rm /cache/boot_log.txt
-    start logger
-
 on property:sys.boot_completed=1
     # Stop the logger service
-    stop logger
-
     stop boot_lc
     stop boot_lc_crash
     stop boot_lc_kernel
 
-    stop boot_lc
-    stop boot_lc_crash
-    stop boot_lc_kernel
+
