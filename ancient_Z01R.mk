@@ -30,6 +30,10 @@ TARGET_INCLUDE_WIFI_EXT := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := false
 $(call inherit-product, vendor/ancient/config/common_full_phone.mk)
 
+#Ancient
+ANCIENT_OFFICIAL=true
+FORCE_OTA=true
+
 PRODUCT_DEVICE := Z01R
 PRODUCT_MANUFACTURER := Asus
 PRODUCT_NAME := ancient_Z01R
