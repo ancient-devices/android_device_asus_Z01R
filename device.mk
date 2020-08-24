@@ -98,7 +98,12 @@ PRODUCT_PACKAGES += \
     libvulkan \
     vendor.display.config@1.0
 
-# Doze
+#Doze
+PRODUCT_PACKAGES += \
+    AsusDoze \
+    AsusPocketMode
+
+#Doze
 PRODUCT_PACKAGES += \
     CustomDoze
 
